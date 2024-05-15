@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MasterPage.Master",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\MasterPage.Master",
+              "RelativeDocumentMoniker": "WebApp\\MasterPage.Master",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\MasterPage.Master",
+              "RelativeToolTip": "WebApp\\MasterPage.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-15T20:32:16.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Productos.aspx",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Productos.aspx",
+              "RelativeDocumentMoniker": "WebApp\\Productos.aspx",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Productos.aspx",
+              "RelativeToolTip": "WebApp\\Productos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-15T20:31:32.522Z",
+              "EditorCaption": ""
             }
           ]
         },
