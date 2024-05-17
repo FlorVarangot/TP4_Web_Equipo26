@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|c:\\users\\flore\\onedrive\\documentos\\utn\\programacion iii\\tp4 webforms\\webapp\\webapp\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67F7ABBC-24F5-4202-851A-F15C3F2518F0}|WebApp\\TP4_Web_Equipo26.csproj|solutionrelative:webapp\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MasterPage.Master",
-              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\MasterPage.Master",
-              "RelativeDocumentMoniker": "WebApp\\MasterPage.Master",
-              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\MasterPage.Master",
-              "RelativeToolTip": "WebApp\\MasterPage.Master",
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Default.aspx",
+              "RelativeDocumentMoniker": "WebApp\\Default.aspx",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Default.aspx",
+              "RelativeToolTip": "WebApp\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-15T20:32:16.748Z",
+              "WhenOpened": "2024-05-17T13:57:06.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Productos.aspx",
-              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Productos.aspx",
-              "RelativeDocumentMoniker": "WebApp\\Productos.aspx",
-              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Productos.aspx",
-              "RelativeToolTip": "WebApp\\Productos.aspx",
+              "Title": "Carrito.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Carrito.aspx.cs",
+              "RelativeDocumentMoniker": "WebApp\\Carrito.aspx.cs",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Carrito.aspx.cs",
+              "RelativeToolTip": "WebApp\\Carrito.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:16:22.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "WebApp\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Default.aspx.cs",
+              "RelativeToolTip": "WebApp\\Default.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:05:36.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Carrito.aspx",
+              "DocumentMoniker": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Carrito.aspx",
+              "RelativeDocumentMoniker": "WebApp\\Carrito.aspx",
+              "ToolTip": "C:\\Users\\flore\\OneDrive\\Documentos\\UTN\\Programacion III\\TP4 WebForms\\WebApp\\WebApp\\Carrito.aspx",
+              "RelativeToolTip": "WebApp\\Carrito.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-15T20:31:32.522Z",
+              "WhenOpened": "2024-05-17T12:25:12.593Z",
               "EditorCaption": ""
             }
           ]

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,11 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> lista = negocio.listar();
+
+            dgvArticulos.DataSource = lista;
+            dgvArticulos.DataBind();
 
         }
     }

@@ -13,7 +13,13 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> lista = negocio.listar();
 
+
+            //Aquí no debe ir una dgv sino cards de productos
+            dgvArticulos.DataSource = lista;
+            dgvArticulos.DataBind();
         }
 
     }

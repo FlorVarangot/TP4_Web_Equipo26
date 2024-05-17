@@ -20,52 +20,25 @@
         <div>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Default.aspx">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="Default.aspx">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Productos.aspx">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <%--<a class="nav-link" href="Carrito.aspx">Mi carrito</a>--%>
-                </li>
-                <li>
-                    <%--<i class="fa-solid fa-cart-shopping" href="Carrito.aspx"></i>--%>
+                    <a class="nav-link" href="Carrito.aspx">Mi carrito</a>
                 </li>
             </ul>
         </div>
 
-        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-cart-shopping" href="Carrito.aspx"></i></button>
-
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <p>Try scrolling the rest of the page to see this option in action.</p>
-            </div>
+        <%-- Podemos probar la class="grid text-center" mirar doc en Bootstrap--%>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Carrito</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div>
-                    Este es tu carrito actual.
-                </div>
-            </div>
-        </div>
-
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
 
         <footer>
             <hr />
             <%--Footer--%>
             <div class="footer">
-                <p>© 2024 TP4 PROG III UTN - Grupo 26</p>
+                <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
                 <p>Di Giovanni, Rodriguez Varangot, Vazquez</p>
             </div>
         </footer>
