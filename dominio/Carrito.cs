@@ -23,18 +23,7 @@ namespace dominio
         }
 
         //Método para buscar el id capturado en el listado de articulos del carrito
-        public Articulo buscarArticulo(int id)
-        {
-            foreach (Articulo articulo in lista)
-            {
-                if (articulo.ID == id)
-                {
-                    return articulo;
-                }
-            }
-
-            return null;
-        }
+        //Se elimana bsuca rarticulo porque no va a hacer falta
 
         //Método para sacar el total de la compra
         public decimal totalizarCompra()

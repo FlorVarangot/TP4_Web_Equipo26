@@ -29,4 +29,10 @@
             </asp:GridView>
         </div>
     </div>
+     </div>
+ <div class="row">
+     <div class="col">
+         <a href="Default.aspx" class="btn btn-primary">Seguir comprando</a>
+     </div>
+ </div>
 </asp:Content>
