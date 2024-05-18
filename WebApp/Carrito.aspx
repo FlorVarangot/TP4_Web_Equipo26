@@ -15,8 +15,16 @@
     </div>
     <hr />
     <div class="row">
-        <div class="col-6">
-            <asp:GridView class="table" runat="server" ID="dgvArticulos"></asp:GridView>
+        <div>
+            <asp:GridView class="table" runat="server" CssClass="table table-dark table-bordered" ID="dgvArticulos" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:Boundfield HeaderText="Código" Datafield="Codigo" />
+                    <asp:Boundfield HeaderText="Nombre" Datafield="Nombre" />
+                    <asp:Boundfield HeaderText="Descripción" Datafield="Descripcion" />
+                    <asp:Boundfield HeaderText="Marca" Datafield="Marca" />
+                    <asp:Boundfield HeaderText="Precio $" Datafield="Precio" />
+                </Columns>
+            </asp:GridView>
         </div>
     </div>
 </asp:Content>

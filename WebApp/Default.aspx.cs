@@ -11,16 +11,26 @@ namespace WebApp
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public List<Articulo> ListaArticulos { get; set; }
+    
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> lista = negocio.listar();
-
-
-            //Aquí no debe ir una dgv sino cards de productos
-            dgvArticulos.DataSource = lista;
-            dgvArticulos.DataBind();
+            if (!IsPostBack) // Verifico si es la primera carga de la página
+            {
+                if (Session["ListaArticulos"] != null)
+                   ListaArticulos = (List<Articulo>)Session["ListaArticulos"];
+                else
+                {
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    ListaArticulos = negocio.listar();
+                    Session.Add("ListaArticulos", ListaArticulos);
+                }
+            }
         }
 
+
+      
+
+        
     }
 }

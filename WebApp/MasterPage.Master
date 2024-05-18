@@ -16,17 +16,38 @@
 
 </head>
 <body>
+    <header class="navbar" style="background-color: #e3f2fd;">    
+           
+            <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="Recursos/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      TIENDA FMD
+    </a>
+  </div>
+
+   <div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Default.aspx">Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Carrito.aspx">Mi carrito</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ArticuloCarga.aspx">Ingreso</a>
+        </li>
+    </ul>
+</div>
+
+</nav>
+
+
+
+
+    </header>
     <form id="form1" runat="server">
-        <div>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Default.aspx">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Carrito.aspx">Mi carrito</a>
-                </li>
-            </ul>
-        </div>
+        
 
         <%-- Podemos probar la class="grid text-center" mirar doc en Bootstrap--%>
         <div class="container">
@@ -36,10 +57,9 @@
 
         <footer>
             <hr />
-            <%--Footer--%>
             <div class="footer">
                 <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
-                <p>Di Giovanni, Rodriguez Varangot, Vazquez</p>
+                <p>Di Giovanni, Rodriguez Varangot, Velazquez</p>
             </div>
         </footer>
 

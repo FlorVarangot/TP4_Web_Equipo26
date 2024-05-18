@@ -79,3 +79,12 @@ C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\Nego
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\Negocio\obj\Debug\negocio.csproj.Up2Date
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\Negocio\obj\Debug\Negocio.dll
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\Negocio\obj\Debug\Negocio.pdb
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\bin\Debug\Negocio.dll
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\bin\Debug\Negocio.pdb
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\bin\Debug\dominio.dll
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\bin\Debug\dominio.pdb
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\obj\Debug\Negocio.dll
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\Negocio\obj\Debug\Negocio.pdb

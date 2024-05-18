@@ -22,3 +22,9 @@ C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\domi
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\dominio\obj\Debug\dominio.dll
 C:\Users\flore\OneDrive\Documentos\UTN\Programacion III\TP4 WebForms\WebApp\dominio\obj\Debug\dominio.pdb
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\bin\Debug\dominio.dll
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\bin\Debug\dominio.pdb
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\obj\Debug\dominio.dll
+C:\Users\matii\OneDrive\Escritorio\Nueva carpeta\TP4_Web_Equipo26\dominio\obj\Debug\dominio.pdb
