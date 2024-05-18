@@ -23,6 +23,8 @@
                     <asp:Boundfield HeaderText="Descripción" Datafield="Descripcion" />
                     <asp:Boundfield HeaderText="Marca" Datafield="Marca" />
                     <asp:Boundfield HeaderText="Precio $" Datafield="Precio" />
+                    <%--<asp:Boundfield HeaderText="cantidad " Datafield="ca" />--%>
+                    <%--<asp:Boundfield HeaderText="sub $" Datafield="sub" />--%>
                 </Columns>
             </asp:GridView>
         </div>

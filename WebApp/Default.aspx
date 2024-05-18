@@ -20,11 +20,11 @@
     <div class="row">
         <div class="col">
             <div class="input-group">
-                <div class="form-outline" data-mdb-input-init>
+                <div class="form-outline" >
                     <input type="search" id="form1" class="form-control" />
                     <label class="form-label" for="form1">Search</label>
                 </div>
-                <button type="button" class="btn btn-secondary  " data-mdb-ripple-init>
+                <button type="button" class="btn btn-secondary  " >
                     <i class="fas fa-search"></i>
                 </button>
             </div>
@@ -50,9 +50,8 @@
                         <p class="card-text"><strong>Precio:</strong> <%: arti.Precio %></p>
                         <p class="card-text"><strong>Marca:</strong> <%: arti.Marca %></p>
                         <p class="card-text"><strong>Categoría:</strong> <%: arti.Categoria %></p>
-                        <asp:Button Text="+" runat="server" />
-                        <asp:Label Text="0" runat="server" />
-                        <asp:Button Text="-" runat="server" />
+                        <asp:Button Text="Lo quiero!!!" ID="BtnSumar" OnClick="BtnSumar_Click" class="btn btn-success" runat="server" />
+                        <br />
                         <a href="Detalle.aspx?id=<%: arti.ID %>">Ver Detalle</a>
                     </div>
                 </div>

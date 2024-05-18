@@ -28,9 +28,9 @@ namespace WebApp
             }
         }
 
+        protected void BtnSumar_Click(object sender, EventArgs e)
+        {
 
-      
-
-        
+        }
     }
 }

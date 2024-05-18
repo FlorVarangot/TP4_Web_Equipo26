@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ArticuloCarga.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Detalle.aspx" />
     <Content Include="Global.asax" />
@@ -76,13 +75,6 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArticuloCarga.aspx.cs">
-      <DependentUpon>ArticuloCarga.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticuloCarga.aspx.designer.cs">
-      <DependentUpon>ArticuloCarga.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
