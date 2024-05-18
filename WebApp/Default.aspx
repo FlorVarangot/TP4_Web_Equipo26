@@ -20,11 +20,11 @@
     <div class="row">
         <div class="col">
             <div class="input-group">
-                <div class="form-outline" >
+                <div class="form-outline">
                     <input type="search" id="form1" class="form-control" />
                     <label class="form-label" for="form1">Search</label>
                 </div>
-                <button type="button" class="btn btn-secondary  " >
+                <button type="button" class="btn btn-secondary  ">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
@@ -50,7 +50,11 @@
                         <p class="card-text"><strong>Precio:</strong> <%: arti.Precio %></p>
                         <p class="card-text"><strong>Marca:</strong> <%: arti.Marca %></p>
                         <p class="card-text"><strong>Categoría:</strong> <%: arti.Categoria %></p>
-                        <asp:Button Text="Lo quiero!!!" ID="BtnSumar" OnClick="BtnSumar_Click" class="btn btn-success" runat="server" />
+                        <asp:Button Text="¡Lo quiero!" ID="BtnSumar" OnClick="BtnSumar_Click" class="btn btn-success" runat="server" />
+
+                        <%--Qué tal si sumamos un dropdown list en 1 por default para seleccionar la cantidad desde aquí, 
+                            y entonces el btnSumar capture la cantidad junto con el ID?--%>
+
                         <br />
                         <a href="Detalle.aspx?id=<%: arti.ID %>">Ver Detalle</a>
                     </div>
@@ -59,6 +63,6 @@
             <% } %>
         </div>
     </div>
-     
-  
+
+
 </asp:Content>
