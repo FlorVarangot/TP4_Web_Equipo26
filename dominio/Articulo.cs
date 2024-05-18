@@ -26,6 +26,7 @@ namespace dominio
         public Categoria Categoria { get; set; }            
         public Imagen Imagen { get; set; }
 
+        public int Cantidad { get; set; }
 
     }
 }
