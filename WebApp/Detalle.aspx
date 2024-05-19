@@ -4,12 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-   <div class="card mb-3 mx-auto" style="max-width: 540px;">
+ <div class="card mx-auto" style="max-width: 700px;">
     <div class="row g-0">
-        <div class="col-md-4">
-            <asp:Image ID="detalleImagen" runat="server" CssClass="card-img-top img-fluid rounded-start" Style="max-height: 300px; object-fit: contain;" />
+        <div class="col-md-6">
+            <asp:Image ID="detalleImagen" runat="server" CssClass="card-img-top img-fluid rounded-start" Style="height: 100%; object-fit: cover;" />
         </div>
-        <div class="col-md-8 align-self-center">
+        <div class="col-md-6 d-flex align-items-center">
             <div class="card-body">
                 <h5 class="card-title">
                     <asp:Label ID="detalleNombre" runat="server" />
@@ -27,6 +27,7 @@
                     <asp:Label ID="detalleCategoria" runat="server" />
                 </p>
                 <a href='Carrito.aspx?id=<%# Eval("ID") %>' class="btn btn-success">¡Lo quiero!</a>
+
                 <a href="Default.aspx" class="btn btn-success">Regresar</a>
             </div>
         </div>

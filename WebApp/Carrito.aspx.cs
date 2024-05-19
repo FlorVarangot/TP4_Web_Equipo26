@@ -20,12 +20,13 @@ namespace WebApp
             {
                 if (Session["compras"] == null)
                 {
-                    Session.Add("compras", new List<Articulo>());
+                    Session["compras"] = new List<Articulo>();
                 }
 
-                if (Request.QueryString["id"] != null)
+                if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out int ID))
                 {
-                    int ID = int.Parse(Request.QueryString["id"]);
+                    //lo comento para probar conviriento a entero desde detalle
+                    // int ID = int.Parse(Request.QueryString["id"]);
                     List<Articulo> listaCarrito = (List<Articulo>)Session["compras"];
                     List<Articulo> ListaOriginal = (List<Articulo>)Session["ListaArticulos"];
                     Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
@@ -35,7 +36,7 @@ namespace WebApp
                         Articulo articuloCarrito = listaCarrito.Find(x => x.ID == seleccionado.ID);
                         if (articuloCarrito != null)
                         {
-                            
+
 
 
 
@@ -55,12 +56,13 @@ namespace WebApp
                         Session["compras"] = listaCarrito;
                     }
 
-                    dgvArticulos.DataSource = (List<Articulo>)Session["compras"];
+
+                    dgvArticulos.DataSource = listaCarrito;
                     dgvArticulos.DataBind();
                 }
             }
 
-           micarrito.totalizarCompra();
+            micarrito.totalizarCompra();
         }
 
         protected void btnMas_Click(object sender, EventArgs e)
@@ -76,9 +78,9 @@ namespace WebApp
                 Session["compras"] = compras;
             }
 
-            Response.Redirect(Request.RawUrl);
-            //    dgvArticulos.DataSource = micarrito.getLista();
-            //    dgvArticulos.DataBind();
+            //  Response.Redirect(Request.RawUrl);
+            dgvArticulos.DataSource = compras;
+            dgvArticulos.DataBind();
         }
 
         protected void btnMenos_Click(object sender, EventArgs e)
@@ -93,30 +95,29 @@ namespace WebApp
                 Session["compras"] = compras;
             }
 
-           Response.Redirect(Request.RawUrl);
-            //dgvArticulos.DataSource = micarrito.getLista();
-            //dgvArticulos.DataBind();
+            // Response.Redirect(Request.RawUrl);
+            dgvArticulos.DataSource = compras;
+            dgvArticulos.DataBind();
         }
 
         // A revisar posible conflicto con agregar 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            if (Request.QueryString["id"] != null)
+
+            Button btn = (Button)sender;
+            int id = int.Parse(btn.CommandArgument);
+            List<Articulo> compras = (List<Articulo>)Session["compras"];
+            Articulo articulo = compras.Find(x => x.ID == id);
+            if (articulo != null)
             {
-                Button btn = (Button)sender;
-                int id = int.Parse(btn.CommandArgument);
-                List<Articulo> compras = (List<Articulo>)Session["compras"];
-                Articulo articulo = compras.Find(x => x.ID == id);
-                if (id == articulo.ID)
-                {
-                    compras.Remove(articulo);
+                compras.Remove(articulo);
+                Session["compras"] = compras;
 
-                }
+                // Actualizar la GridView
+                dgvArticulos.DataSource = compras;
+                dgvArticulos.DataBind();
             }
-            Response.Redirect(Request.RawUrl);
-            
-
 
         }
     }
