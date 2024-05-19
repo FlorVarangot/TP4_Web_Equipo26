@@ -6,20 +6,43 @@ using System.Threading.Tasks;
 
 namespace dominio
 {
-    internal class Carrito
+    public class Micarrito
     {
         private List<Articulo> lista = new List<Articulo>();
 
         public void agregarArticulo(Articulo articulo)
         {
             lista.Add(articulo);
+            
         }
+
+        public bool Verificar(int id, List<Articulo> Lista)
+        {
+
+            foreach (Articulo articulo in Lista)
+            {
+                if (id == articulo.ID)
+                {
+                    return false;
+                }
+            }
+            return true;
+            
+        }
+
+
 
         public List<Articulo> getLista() { return lista; }
 
-        public void eliminarArticulo()
+        public void eliminarArticulo(int id, List<Articulo> Lista)
         {
-            //Agregar logica para quitar articulo del carrito
+            foreach (Articulo articulo in Lista)
+            {
+                if (id == articulo.ID)
+                {
+                    Lista.Remove(articulo);
+                }
+            }
         }
 
         //Método para buscar el id capturado en el listado de articulos del carrito
@@ -45,5 +68,8 @@ namespace dominio
             //Devuelve cantidad
             return cantidad;
         }
+
+       
+
     }
 }

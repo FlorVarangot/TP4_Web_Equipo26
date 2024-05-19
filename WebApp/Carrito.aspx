@@ -8,31 +8,38 @@
         <div class="col-2"></div>
         <div class="col">
             Tu carrito:
-        </div>
         <div class="col">
             <i class="fa-solid fa-basket-shopping"></i>
+        </div>
         </div>
     </div>
     <hr />
     <div class="row">
         <div>
-            <asp:GridView class="table" runat="server" CssClass="table table-dark table-bordered" ID="dgvArticulos" AutoGenerateColumns="false">
+            <asp:GridView class="table" runat="server" CssClass="table table-dark table-bordered" ID="dgvArticulos" AutoGenerateColumns="false" >
                 <Columns>
-                    <asp:Boundfield HeaderText="Código" Datafield="Codigo" />
-                    <asp:Boundfield HeaderText="Nombre" Datafield="Nombre" />
-                    <asp:Boundfield HeaderText="Descripción" Datafield="Descripcion" />
-                    <asp:Boundfield HeaderText="Marca" Datafield="Marca" />
-                    <asp:Boundfield HeaderText="Precio $" Datafield="Precio" />
-                    <%--<asp:Boundfield HeaderText="cantidad " Datafield="ca" />--%>
-                    <%--<asp:Boundfield HeaderText="sub $" Datafield="sub" />--%>
+                    <asp:BoundField HeaderText="Código" DataField="Codigo" />
+                    <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                    <asp:BoundField HeaderText="Descripción" DataField="Descripcion" />
+                    <asp:BoundField HeaderText="Marca" DataField="Marca" />
+                    <asp:BoundField HeaderText="Precio $" DataField="Precio" />
+                    <%--<asp:ButtonField ButtonType="Image" HeaderText=""  ImageUrl="~/Recursos/Eliminar.png" />--%>
+                    <asp:BoundField HeaderText="Cantidad" />
+                    <asp:ButtonField ButtonType="Image" CommandName="BtnEliminar" HeaderText=""  ImageUrl="~/Recursos/Eliminar.png" ControlStyle-Height="20px" ControlStyle-Width="20px" ItemStyle-HorizontalAlign="Center" />
+                    
+                  
+                 
                 </Columns>
             </asp:GridView>
         </div>
     </div>
-     </div>
- <div class="row">
-     <div class="col">
-         <a href="Default.aspx" class="btn btn-primary">Seguir comprando</a>
-     </div>
- </div>
+
+  
+
+
+    <div class="row">
+        <div class="col">
+            <a href="Default.aspx" class="btn btn-primary">Seguir comprando</a>
+        </div>
+    </div>
 </asp:Content>

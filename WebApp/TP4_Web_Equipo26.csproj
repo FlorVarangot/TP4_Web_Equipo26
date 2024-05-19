@@ -70,6 +70,7 @@
     <Content Include="Carrito.aspx" />
     <Content Include="Detalle.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Recursos\Eliminar.png" />
     <Content Include="Recursos\Logo.png" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />

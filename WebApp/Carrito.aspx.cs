@@ -14,8 +14,10 @@ namespace WebApp
     {
         //Instancio para utilizar en la funcionalidad de Carrito
         public Articulo articulo;
-        public Carrito carrito;
+        public Carrito claseCarrito;
         public List<Articulo> compras;
+        public Micarrito micarrito = new Micarrito();
+
 
         /*   protected void Page_Load(object sender, EventArgs e)
            {
@@ -60,15 +62,40 @@ namespace WebApp
                     Carrito = Session["miCarrito"] != null ? (List<Articulo>)Session["miCarrito"] : new List<Articulo>();
 
                     List<Articulo> ListaOriginal = (List<Articulo>)Session["ListaArticulos"];
-                    Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
-                    Carrito.Add(seleccionado);
-                    //Aca actualizo
-                    Session["miCarrito"] = Carrito;
+                    if (micarrito.Verificar(ID,Carrito))
+                    {
+                        Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
+                        Carrito.Add(seleccionado);
+                        
+                        //Aca actualizo
+                        Session["miCarrito"] = Carrito;
 
+                        
+                    }
                     dgvArticulos.DataSource = (List<Articulo>)Session["miCarrito"];
                     dgvArticulos.DataBind();
+
                 }
             }
         }
+
+
+       /* void gvIngevuld_RowCommand(Object sender, GridViewCommandEventArgs e)
+        {
+            
+            if (e.CommandName == "BtnEliminar")
+            {
+                
+                int index = Convert.ToInt32(e.CommandArgument);
+                List<Articulo> Carrito;
+                
+                micarrito.eliminarArticulo(index, Carrito);
+                
+             
+                
+            }
+        }*/
+
+       
     }
 }
