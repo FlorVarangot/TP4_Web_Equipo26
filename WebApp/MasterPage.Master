@@ -45,20 +45,18 @@
     </header>
     <form id="form1" runat="server">
         
-
-        <%-- Podemos probar la class="grid text-center" mirar doc en Bootstrap--%>
         <div class="container">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
 
-        <footer>
-            <hr />
-            <div class="footer">
-                <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
-                <p>Di Giovanni, Rodriguez Varangot, Velazquez</p>
-            </div>
-        </footer>
+       <footer class="d-flex justify-content-center"> 
+    <hr />
+    <div class="footer">
+        <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
+        <p>Di Giovanni, Rodriguez Varangot, Velazquez</p>
+    </div>
+</footer>
 
     </form>
 </body>
