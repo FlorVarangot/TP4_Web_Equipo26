@@ -16,25 +16,31 @@
     <hr />
     <div class="row">
         <div>
-            <asp:GridView class="table" runat="server" CssClass="table table-dark table-bordered" ID="dgvArticulos" AutoGenerateColumns="false" >
+            <asp:GridView class="table" runat="server" CssClass="table table-dark table-bordered" ID="dgvArticulos" AutoGenerateColumns="false">
                 <Columns>
                     <asp:BoundField HeaderText="Código" DataField="Codigo" />
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                     <asp:BoundField HeaderText="Descripción" DataField="Descripcion" />
                     <asp:BoundField HeaderText="Marca" DataField="Marca" />
-                    <asp:BoundField HeaderText="Precio $" DataField="Precio" />
+                    <asp:BoundField HeaderText="Precio unitario" DataField="Precio" />
                     <%--<asp:ButtonField ButtonType="Image" HeaderText=""  ImageUrl="~/Recursos/Eliminar.png" />--%>
-                    <asp:BoundField HeaderText="Cantidad" />
-                    <asp:ButtonField ButtonType="Image" CommandName="BtnEliminar" HeaderText=""  ImageUrl="~/Recursos/Eliminar.png" ControlStyle-Height="20px" ControlStyle-Width="20px" ItemStyle-HorizontalAlign="Center" />
-                    
-                  
-                 
+                    <asp:ButtonField ButtonType="Image" CommandName="BtnEliminar" HeaderText="" ImageUrl="~/Recursos/Eliminar.png" ControlStyle-Height="20px" ControlStyle-Width="20px" ItemStyle-HorizontalAlign="Center" />
+
+                    <%-- Agrego botones para gestionar cantidad --%>
+                    <asp:TemplateField HeaderText="">
+                        <ItemTemplate>
+                            <asp:Button ID="btnMenos" runat="server" Text="-" OnClick="btnMenos_Click" CommandArgument='<%# Eval("ID") %>' />
+                            <asp:Label ID="lblCantidad" runat="server" Text='<%# Eval("Cantidad") %>' />
+                            <asp:Button ID="btnMas" runat="server" Text="+" OnClick="btnMas_Click" CommandArgument='<%# Eval("ID") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
         </div>
     </div>
 
-  
+
 
 
     <div class="row">

@@ -35,7 +35,7 @@ namespace negocio
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Marca = new Marca();
-                    //cant
+                    aux.Cantidad = datos.Lector.GetInt32(0);
                    
                     if (!(datos.Lector["Marca"] is DBNull))
                     {

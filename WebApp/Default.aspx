@@ -50,14 +50,14 @@
                         <p class="card-text"><strong>Precio:</strong> <%: arti.Precio %></p>
                         <p class="card-text"><strong>Marca:</strong> <%: arti.Marca %></p>
                         <p class="card-text"><strong>Categoría:</strong> <%: arti.Categoria %></p>
-                        <a href="Carrito.aspx?id=<%: arti.ID %>" class="btn btn-success" >Lo quiero!!!</a>
+                        <a href="Carrito.aspx?id=<%: arti.ID %>" class="btn btn-success" >¡Lo quiero!</a>
                         
 
                         <%--Qué tal si sumamos un dropdown list en 1 por default para seleccionar la cantidad desde aquí, 
-                            y entonces el btnSumar capture la cantidad junto con el ID?--%>
+                            y entonces el btnSumar capture la cantidad junto con el ID? (Flor)--%>
 
                         <br />
-                        <a href="Detalle.aspx?id=<%: arti.ID %>">Ver Detalle</a>
+                        <a href="Detalle.aspx?id=<%: arti.ID %>">Ver más</a>
                     </div>
                 </div>
             </div>

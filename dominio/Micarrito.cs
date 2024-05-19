@@ -16,20 +16,18 @@ namespace dominio
             
         }
 
-        public bool Verificar(int id, List<Articulo> Lista)
-        {
+        //public bool Verificar(int id, List<Articulo> Lista)
+        //{
 
-            foreach (Articulo articulo in Lista)
-            {
-                if (id == articulo.ID)
-                {
-                    return false;
-                }
-            }
-            return true;
-            
-        }
-
+        //    foreach (Articulo articulo in Lista)
+        //    {
+        //        if (id == articulo.ID)
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
 
 
         public List<Articulo> getLista() { return lista; }
@@ -44,9 +42,6 @@ namespace dominio
                 }
             }
         }
-
-        //Método para buscar el id capturado en el listado de articulos del carrito
-        //Se elimana bsuca rarticulo porque no va a hacer falta
 
         //Método para sacar el total de la compra
         public decimal totalizarCompra()
