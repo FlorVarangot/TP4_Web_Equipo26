@@ -1,6 +1,7 @@
 ﻿using dominio;
 using negocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
@@ -34,6 +35,10 @@ namespace WebApp
                         Articulo articuloCarrito = listaCarrito.Find(x => x.ID == seleccionado.ID);
                         if (articuloCarrito != null)
                         {
+                            
+
+
+
                             //CON ESTSA VALIDACION ACA; SI TOCO + SUMA DOBLE 
                             //Si el art ya está en carrito, le sumo cant
                             //articuloCarrito.Cantidad += 1;
@@ -55,7 +60,7 @@ namespace WebApp
                 }
             }
 
-            micarrito.totalizarCompra();
+           micarrito.totalizarCompra();
         }
 
         protected void btnMas_Click(object sender, EventArgs e)
@@ -88,22 +93,31 @@ namespace WebApp
                 Session["compras"] = compras;
             }
 
-            Response.Redirect(Request.RawUrl);
+           Response.Redirect(Request.RawUrl);
             //dgvArticulos.DataSource = micarrito.getLista();
             //dgvArticulos.DataBind();
         }
 
-
-        /* void gvIngevuld_RowCommand(Object sender, GridViewCommandEventArgs e)
+        // A revisar posible conflicto con agregar 
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (e.CommandName == "BtnEliminar")
+
+            if (Request.QueryString["id"] != null)
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                List<Articulo> Carrito;
+                Button btn = (Button)sender;
+                int id = int.Parse(btn.CommandArgument);
+                List<Articulo> compras = (List<Articulo>)Session["compras"];
+                Articulo articulo = compras.Find(x => x.ID == id);
+                if (id == articulo.ID)
+                {
+                    compras.Remove(articulo);
 
-                micarrito.eliminarArticulo(index, Carrito);
+                }
             }
-        }*/
+            Response.Redirect(Request.RawUrl);
+            
 
+
+        }
     }
 }

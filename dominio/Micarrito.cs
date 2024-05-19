@@ -16,32 +16,22 @@ namespace dominio
             
         }
 
-        //public bool Verificar(int id, List<Articulo> Lista)
-        //{
-
-        //    foreach (Articulo articulo in Lista)
-        //    {
-        //        if (id == articulo.ID)
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    return true;
-        //}
-
-
-        public List<Articulo> getLista() { return lista; }
-
-        public void eliminarArticulo(int id, List<Articulo> Lista)
+        public bool Verificar(int id, List<Articulo> Lista)
         {
+
             foreach (Articulo articulo in Lista)
             {
                 if (id == articulo.ID)
                 {
-                    Lista.Remove(articulo);
+                    return false;
                 }
             }
+            return true;
         }
+
+
+        public List<Articulo> getLista() { return lista; }
+
 
         //Método para sacar el total de la compra
         public decimal totalizarCompra()

@@ -23,10 +23,8 @@
                     <asp:BoundField HeaderText="Descripción" DataField="Descripcion" />
                     <asp:BoundField HeaderText="Marca" DataField="Marca" />
                     <asp:BoundField HeaderText="Precio unitario" DataField="Precio" />
-                    <%--<asp:ButtonField ButtonType="Image" HeaderText=""  ImageUrl="~/Recursos/Eliminar.png" />--%>
-                    <asp:ButtonField ButtonType="Image" CommandName="BtnEliminar" HeaderText="" ImageUrl="~/Recursos/Eliminar.png" ControlStyle-Height="20px" ControlStyle-Width="20px" ItemStyle-HorizontalAlign="Center" />
-
-                    <%-- Agrego botones para gestionar cantidad --%>
+                     
+                   <%-- Agrego botones para gestionar cantidad --%>
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
                             <asp:Button ID="btnMenos" runat="server" Text="-" OnClick="btnMenos_Click" CommandArgument='<%# Eval("ID") %>' />
@@ -34,7 +32,15 @@
                             <asp:Button ID="btnMas" runat="server" Text="+" OnClick="btnMas_Click" CommandArgument='<%# Eval("ID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-
+                
+                
+                    <asp:TemplateField HeaderText="">
+                        <ItemTemplate>
+                            <asp:Button ID="btnEliminar" BackColor="Red" OnClick="btnEliminar_Click" Text="Eliminar"  runat="server" CommandArgument='<%# Eval("ID") %>'/>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                
+                
                 </Columns>
             </asp:GridView>
         </div>
