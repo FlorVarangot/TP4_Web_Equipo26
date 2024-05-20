@@ -37,21 +37,23 @@
                         </ItemTemplate>
                     </asp:TemplateField>
 
-
-
                 </Columns>
             </asp:GridView>
         </div>
     </div>
 
     <div class="row">
-        <div class="col" style="color:white; font-size:30px">
-            <a href="Default.aspx" class="btn btn-success">Seguir comprando</a>
-            <asp:Button ID="btnComprar" runat="server" Text="Comprar" OnClick="btnComprar_Click" CssClass="btn btn-success" />
-            <%--<asp:Button ID="btnVolverInicio" runat="server" Text="Volver al inicio" CssClass="btn btn-success" OnClick="btnVolverInicio_Click" />--%>
-            <asp:Label ID="lblTotal" runat="server" Text='<%# "Total $" + Session["Total"].ToString() %>' />
+        <div class="col" style="color: white; font-size: 25px">
+            <div>
+                <a href="Default.aspx" class="btn btn-success">Seguir comprando</a>
+                <asp:Button ID="btnComprar" runat="server" Text="Finalizar Compra" OnClick="btnComprar_Click" CssClass="btn btn-success" Style="align-content: end" />
+                <asp:Label runat="server" visible=true Text='<%# "Total compra: $" + Session["Total"].ToString() %>' />
+                <%--<asp:Label ID="Label1" runat="server" visible=true Text='Total compra = $10000' />--%>
+            </div>
+            <div>
+                <asp:Button ID="btnVolverInicio" runat="server" Text="Vaciar Mi carrito" CssClass="btn btn-secondary" OnClick="btnVolverInicio_Click" />
+            </div>
         </div>
     </div>
-    <br>
-
+    <hr />
 </asp:Content>
