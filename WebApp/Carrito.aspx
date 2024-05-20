@@ -26,8 +26,10 @@
                             <asp:Button ID="btnMas" runat="server" Text="+" OnClick="btnMas_Click" CommandArgument='<%# Eval("ID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-
+                
+                    
                     <asp:BoundField HeaderText="Subtotal" DataField="Subtotal" />
+                    
 
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
@@ -35,7 +37,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
 
-                
+                    
                 
                 </Columns>
             </asp:GridView>
@@ -48,6 +50,15 @@
     <div class="row">
         <div class="col">
             <a href="Default.aspx" class="btn btn-primary">Seguir comprando</a>
+            
         </div>
     </div>
+        <br>
+    <div class="row">
+    <div class="col">
+        <asp:Label ID="lblSubtotal" runat="server" Text='<%# "Total $" + Session["Total"].ToString() %>' />
+        
+    </div>
+</div>
+   
 </asp:Content>

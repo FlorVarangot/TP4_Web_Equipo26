@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Timers;
 using System.Web;
 using System.Web.UI;
@@ -48,10 +49,11 @@ namespace WebApp
                             seleccionado.Cantidad = 1;
                             seleccionado.Subtotal = seleccionado.Precio;
                             listaCarrito.Add(seleccionado);
-
+                            Session["Total"] = Total(listaCarrito); //
                         }
                         
                         Session["compras"] = listaCarrito;
+
                         
                     }                 
                 }
@@ -76,6 +78,7 @@ namespace WebApp
                 articulo.Cantidad += 1;
                 articulo.Subtotal = articulo.Precio * articulo.Cantidad;
                 Session["compras"] = compras;
+                Session["Total"] = Total(compras); //
             }
 
             dgvArticulos.DataSource = compras;
@@ -93,6 +96,7 @@ namespace WebApp
                 articulo.Cantidad -= 1;
                 articulo.Subtotal = articulo.Precio * articulo.Cantidad;
                 Session["compras"] = compras;
+                Session["Total"] = Total(compras); //
             }
 
             dgvArticulos.DataSource = compras;
@@ -112,10 +116,22 @@ namespace WebApp
             {
                 compras.Remove(articulo);
                 Session["compras"] = compras;
+                Session["Total"] = Total(compras);
                 dgvArticulos.DataSource = compras;
                 dgvArticulos.DataBind();
             }
 
+        }
+
+        private string Total(List<Articulo> articulos)
+        {
+            float Total = 0;
+            foreach(var articulo in articulos)
+            {
+                Total += articulo.Subtotal;
+            }
+
+            return Convert.ToString(Total);
         }
 
 
