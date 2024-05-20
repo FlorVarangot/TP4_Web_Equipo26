@@ -67,7 +67,7 @@ namespace WebApp
                 }
                 dgvArticulos.DataSource = listaCarrito;
                 dgvArticulos.DataBind();
-                lblTotal.DataBind();
+                lblTotal.Text = "Total compra: $" + Session["Total"].ToString();
             }
 
         }
@@ -91,6 +91,7 @@ namespace WebApp
 
             dgvArticulos.DataSource = compras;
             dgvArticulos.DataBind();
+            lblTotal.Text = "Total compra: $" + Session["Total"].ToString();
         }
 
         protected void btnMenos_Click(object sender, EventArgs e)
@@ -111,6 +112,7 @@ namespace WebApp
 
             dgvArticulos.DataSource = compras;
             dgvArticulos.DataBind();
+            lblTotal.Text = "Total compra: $" + Session["Total"].ToString();
         }
 
          
@@ -129,6 +131,7 @@ namespace WebApp
 
                 dgvArticulos.DataSource = compras;
                 dgvArticulos.DataBind();
+                lblTotal.Text = "Total compra: $" + Session["Total"].ToString();
             }
 
         }
