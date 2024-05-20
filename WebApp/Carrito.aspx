@@ -29,7 +29,7 @@
                 
                     
                     <asp:BoundField HeaderText="Subtotal" DataField="Subtotal" />
-                    
+                 
 
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col">
             <a href="Default.aspx" class="btn btn-primary">Seguir comprando</a>
-            
+          
         </div>
     </div>
         <br>

@@ -6,6 +6,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+      <div class="input-group">
+        <asp:TextBox runat="server" CssClass="form-control mr-sm-2" ID="txtSearch" placeholder="Ingrese el nombre completo del Artículo..." />
+        <asp:Button runat="server" CssClass="btn btn-outline-success my-2 my-sm-0" Text="Buscar" OnClick="Unnamed_Click"  PostBackUrl="~/Default.aspx" />
+    </div>
+</div>
+
+
     <div class="d-flex justify-content-center">git 
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <% foreach (dominio.Articulo arti in ListaArticulos)

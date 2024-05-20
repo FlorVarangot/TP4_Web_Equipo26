@@ -28,6 +28,23 @@ namespace WebApp
             }
         }
 
-        
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            string nombreProducto = txtSearch.Text.Trim();
+            if (!string.IsNullOrEmpty(nombreProducto))
+            {
+                if (Session["ListaArticulos"] != null)
+                {
+                    List<Articulo> ListaArticulos = (List<Articulo>)Session["ListaArticulos"];
+                    
+                    Articulo productoSeleccionado = ListaArticulos.Find(arti => arti.Nombre.Equals(nombreProducto, StringComparison.OrdinalIgnoreCase));
+                    if (productoSeleccionado != null)
+                    {
+                       
+                        Response.Redirect("Detalle.aspx?id=" + productoSeleccionado.ID);
+                    }
+                }
+            }
+        }
     }
 }
