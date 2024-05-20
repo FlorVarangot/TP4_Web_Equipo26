@@ -144,7 +144,7 @@ namespace WebApp
         }
 
         //Comprar no debería hacer nada en esta consigna, y el total deberia mostrarse todo el tiempo.
-        //Dejo porque no hemos resuelto la visibilidad de la lblTotal
+        //Dejo porque ayuda aún actualizar Total
         protected void btnComprar_Click(object sender, EventArgs e)
         {
             List<Articulo> compras = (List<Articulo>)Session["compras"];
