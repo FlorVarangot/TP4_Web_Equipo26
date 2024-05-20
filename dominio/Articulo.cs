@@ -24,11 +24,14 @@ namespace dominio
 
         [DisplayName("Categoía")]
         public Categoria Categoria { get; set; }            
-        public List<Imagen>Imagenes { get; set; }
         
-        //public Imagen Imagen { get; set; }
+
+        // public List<Imagen>Imagenes { get; set; }
+        
+        public Imagen Imagen { get; set; }
 
         public int Cantidad { get; set; }
+
 
         public float Subtotal { get; set; }
 

@@ -13,7 +13,7 @@
             <div class="col">
                 <div class="card h-100">
                     <% 
-                        string imageUrl = string.IsNullOrEmpty(arti.Imagenes[0].ImagenURl) ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-YyTxMcA9tGqbKd-9EgVe5pzPBazsWyt1L4ICuWPTA&s" : arti.Imagenes[0].ImagenURl;
+                        string imageUrl = string.IsNullOrEmpty(arti.Imagen.ImagenURl) ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-YyTxMcA9tGqbKd-9EgVe5pzPBazsWyt1L4ICuWPTA&s" : arti.Imagen.ImagenURl;
                     %>
                     <img src="<%= imageUrl %>" class="card-img-top img-fluid" alt="Imagen de <%: arti.Nombre %>"
                         style="max-height: 200px; object-fit: contain;">
