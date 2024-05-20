@@ -5,34 +5,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col">
-            <h2>WEB APP CARRITO</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-5"></div>
-        <div class="col">
-            <i class="fa-solid fa-basket-shopping"></i>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="input-group">
-                <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">Search</label>
-                </div>
-                <button type="button" class="btn btn-secondary  ">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <hr />
-
-
+   
     <div class="d-flex justify-content-center">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <% foreach (dominio.Articulo arti in ListaArticulos)

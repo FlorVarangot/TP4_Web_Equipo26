@@ -16,47 +16,46 @@
 
 </head>
 <body>
-    <header class="navbar" style="background-color: #e3f2fd;">    
-           
-            <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="Recursos/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      TIENDA FMD
-    </a>
-  </div>
+    <header class="navbar justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Tienda FMD</a>
+                    <img src="Recursos/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                </div>
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="Default.aspx">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Carrito.aspx">Mi Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Carrito.aspx"><i class="fa-solid fa-basket-shopping"></i></i><span class="badge badge-dark">0</span></a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Artículo, marca, categoría..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </nav>
 
-   <div>
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Default.aspx">Productos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Carrito.aspx">Mi carrito</a>
-        </li>
-    </ul>
-</div>
-
-</nav>
 
 
 
 
     </header>
     <form id="form1" runat="server">
-        
+
         <div class="container">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
 
-       <footer class="d-flex justify-content-center"> 
-    <hr />
-    <div class="footer">
-        <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
-        <p>Di Giovanni, Rodriguez Varangot, Velazquez</p>
-    </div>
-</footer>
+        <footer class="d-flex justify-content-center">
+            <hr />
+            <div class="footer">
+                <p>© 2024 TP4 PROG III UTN FRGP - Grupo 26</p>
+                <p>Di Giovanni, Rodriguez Varangot, Velazquez</p>
+            </div>
+        </footer>
 
     </form>
 </body>

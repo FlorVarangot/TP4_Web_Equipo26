@@ -6,12 +6,6 @@
 
     <div class="row">
         <div class="col-2"></div>
-        <div class="col">
-            Tu carrito:
-        <div class="col">
-            <i class="fa-solid fa-basket-shopping"></i>
-        </div>
-        </div>
     </div>
     <hr />
     <div class="row">
