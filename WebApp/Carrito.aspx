@@ -25,7 +25,7 @@
                     <asp:BoundField HeaderText="Precio unitario" DataField="Precio" />
                      
                    <%-- Agrego botones para gestionar cantidad --%>
-                    <asp:TemplateField HeaderText="">
+                    <asp:TemplateField HeaderText="Cantidad">
                         <ItemTemplate>
                             <asp:Button ID="btnMenos" runat="server" Text="-" OnClick="btnMenos_Click" CommandArgument='<%# Eval("ID") %>' />
                             <asp:Label ID="lblCantidad" runat="server" Text='<%# Eval("Cantidad") %>' />
@@ -33,12 +33,20 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 
-                
+                    
+                    <asp:TemplateField HeaderText="Subtotal">
+                        <ItemTemplate>
+                            <asp:Label ID="lblSubtotal" runat="server" Text='<%# "$" + Session["Subt"].ToString() %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    
+
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
                             <asp:Button ID="btnEliminar" BackColor="Red" OnClick="btnEliminar_Click" Text="Eliminar"  runat="server" CommandArgument='<%# Eval("ID") %>'/>
                         </ItemTemplate>
                     </asp:TemplateField>
+
                 
                 
                 </Columns>

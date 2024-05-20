@@ -23,12 +23,14 @@ namespace WebApp
                     Session["compras"] = new List<Articulo>();
                 }
 
+                List<Articulo> listaCarrito = (List<Articulo>)Session["compras"];
+                List<Articulo> ListaOriginal = (List<Articulo>)Session["ListaArticulos"];
+
                 if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out int ID))
                 {
                     //lo comento para probar conviriento a entero desde detalle
                     // int ID = int.Parse(Request.QueryString["id"]);
-                    List<Articulo> listaCarrito = (List<Articulo>)Session["compras"];
-                    List<Articulo> ListaOriginal = (List<Articulo>)Session["ListaArticulos"];
+                    
                     Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
 
                     if (seleccionado != null)
@@ -52,17 +54,27 @@ namespace WebApp
                             //Si el art no está en carrito, lo agrega
                             seleccionado.Cantidad = 1;
                             listaCarrito.Add(seleccionado);
+
                         }
+                        decimal Subt = micarrito.totalizarCompra();
+                        Session["Subt"] = Convert.ToString(Subt);
                         Session["compras"] = listaCarrito;
-                    }
-
-
-                    dgvArticulos.DataSource = listaCarrito;
-                    dgvArticulos.DataBind();
+                        
+                    }                 
                 }
+
+                
+              
+
+
+                dgvArticulos.DataSource = listaCarrito;
+                dgvArticulos.DataBind();
+
+
+
             }
 
-            micarrito.totalizarCompra();
+            
         }
 
         protected void btnMas_Click(object sender, EventArgs e)
@@ -100,7 +112,7 @@ namespace WebApp
             dgvArticulos.DataBind();
         }
 
-        // A revisar posible conflicto con agregar 
+         
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
@@ -120,5 +132,9 @@ namespace WebApp
             }
 
         }
+
+        
+
+
     }
 }
