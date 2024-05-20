@@ -32,5 +32,8 @@ namespace dominio
 
         public int Cantidad { get; set; }
 
+
+        public float Subtotal { get; set; }
+
     }
 }

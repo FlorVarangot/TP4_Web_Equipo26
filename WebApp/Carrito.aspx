@@ -26,14 +26,8 @@
                             <asp:Button ID="btnMas" runat="server" Text="+" OnClick="btnMas_Click" CommandArgument='<%# Eval("ID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-                
-                    
-                    <asp:TemplateField HeaderText="Subtotal">
-                        <ItemTemplate>
-                            <asp:Label ID="lblSubtotal" runat="server" Text='<%# "$" + Session["Subt"].ToString() %>' />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    
+
+                    <asp:BoundField HeaderText="Subtotal" DataField="Subtotal" />
 
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>

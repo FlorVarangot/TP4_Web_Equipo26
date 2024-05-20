@@ -13,6 +13,8 @@ namespace WebApp
 {
     public partial class Carrito : System.Web.UI.Page
     {
+        
+        //Eliminar mi carrito
         public Micarrito micarrito = new Micarrito();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,11 +46,11 @@ namespace WebApp
                         {
                             //Si el art no está en carrito, lo agrega
                             seleccionado.Cantidad = 1;
+                            seleccionado.Subtotal = seleccionado.Precio;
                             listaCarrito.Add(seleccionado);
 
                         }
-                        decimal Subt = micarrito.totalizarCompra();
-                        Session["Subt"] = Convert.ToString(Subt);
+                        
                         Session["compras"] = listaCarrito;
                         
                     }                 
@@ -72,6 +74,7 @@ namespace WebApp
             if (articulo != null && articulo.Cantidad < 6)
             {
                 articulo.Cantidad += 1;
+                articulo.Subtotal = articulo.Precio * articulo.Cantidad;
                 Session["compras"] = compras;
             }
 
@@ -88,6 +91,7 @@ namespace WebApp
             if (articulo != null && articulo.Cantidad > 1)
             {
                 articulo.Cantidad -= 1;
+                articulo.Subtotal = articulo.Precio * articulo.Cantidad;
                 Session["compras"] = compras;
             }
 
@@ -108,8 +112,6 @@ namespace WebApp
             {
                 compras.Remove(articulo);
                 Session["compras"] = compras;
-
-                // Actualizar la GridView
                 dgvArticulos.DataSource = compras;
                 dgvArticulos.DataBind();
             }
