@@ -96,7 +96,7 @@ namespace WebApp
                 articulo.Cantidad -= 1;
                 articulo.Subtotal = articulo.Precio * articulo.Cantidad;
                 Session["compras"] = compras;
-                Session["Total"] = Total(compras); //
+                Session["Total"] = Total(compras);
             }
 
             dgvArticulos.DataSource = compras;
@@ -123,17 +123,33 @@ namespace WebApp
 
         }
 
-        private string Total(List<Articulo> articulos)
+        private float Total(List<Articulo> articulos)
         {
-            float Total = 0;
-            foreach(var articulo in articulos)
+            float total = 0;
+            foreach (var articulo in articulos)
             {
-                Total += articulo.Subtotal;
+                total += articulo.Precio * articulo.Cantidad; 
             }
 
-            return Convert.ToString(Total);
+            return total;
         }
 
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> compras = (List<Articulo>)Session["compras"];
+            float total = Total(compras);
+            lblTotal.Text = "Total $" + total.ToString();
+            Session["compras"] = compras;
+            dgvArticulos.DataSource = compras;
+            dgvArticulos.DataBind();
+        }
 
+        protected void btnVolverInicio_Click(object sender, EventArgs e)
+        {
+            Session["compras"] = new List<Articulo>();
+            Session["Total"] = 0;
+            Response.Redirect("Default.aspx");
+        }
     }
+    
 }
