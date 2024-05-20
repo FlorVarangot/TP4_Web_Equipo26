@@ -33,7 +33,7 @@
 
                     <asp:TemplateField HeaderText="">
                         <ItemTemplate>
-                            <asp:Button ID="btnEliminar" BackColor="Red" OnClick="btnEliminar_Click" Text="Eliminar" runat="server" CommandArgument='<%# Eval("ID") %>' />
+                            <asp:Button ID="btnEliminar" BackColor="Red" OnClick="btnEliminar_Click" Text="Eliminar" ForeColor="White" BorderStyle="Groove" runat="server" CommandArgument='<%# Eval("ID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -45,10 +45,10 @@
     </div>
 
     <div class="row">
-        <div class="col">
+        <div class="col" style="color:white; font-size:30px">
             <a href="Default.aspx" class="btn btn-success">Seguir comprando</a>
             <asp:Button ID="btnComprar" runat="server" Text="Comprar" OnClick="btnComprar_Click" CssClass="btn btn-success" />
-            <asp:Button ID="btnVolverInicio" runat="server" Text="Volver al inicio" CssClass="btn btn-success" OnClick="btnVolverInicio_Click" />
+            <%--<asp:Button ID="btnVolverInicio" runat="server" Text="Volver al inicio" CssClass="btn btn-success" OnClick="btnVolverInicio_Click" />--%>
             <asp:Label ID="lblTotal" runat="server" Text='<%# "Total $" + Session["Total"].ToString() %>' />
         </div>
     </div>

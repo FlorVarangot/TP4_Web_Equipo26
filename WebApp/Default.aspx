@@ -5,15 +5,13 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
-      <div class="input-group">
+
+    <div class="input-group mb-3">
         <asp:TextBox runat="server" CssClass="form-control mr-sm-2" ID="txtSearch" placeholder="Ingrese el nombre completo del Artículo..." />
-        <asp:Button runat="server" CssClass="btn btn-outline-success my-2 my-sm-0" Text="Buscar" OnClick="Unnamed_Click"  PostBackUrl="~/Default.aspx" />
+        <asp:Button runat="server" CssClass="btn btn-success my-2 my-sm-0" Text="Buscar" OnClick="Unnamed_Click" PostBackUrl="~/Default.aspx" />
     </div>
-</div>
 
-
-    <div class="d-flex justify-content-center">git 
+    <div class="d-flex justify-content-center">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <% foreach (dominio.Articulo arti in ListaArticulos)
                 { %>
@@ -24,14 +22,14 @@
                     %>
                     <img src="<%= imageUrl %>" class="card-img-top img-fluid" alt="Imagen de <%: arti.Nombre %>"
                         style="max-height: 200px; object-fit: contain;">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:lightblue; border:dashed">
                         <h5 class="card-title"><%: arti.Nombre %></h5>
                         <p class="card-text"><strong>Descripcion:</strong> <%: arti.Descripcion %></p>
                         <p class="card-text"><strong>Precio:</strong> <%: arti.Precio %></p>
                         <p class="card-text"><strong>Marca:</strong> <%: arti.Marca %></p>
                         <p class="card-text"><strong>Categoría:</strong> <%: arti.Categoria %></p>
-                        <a href="Carrito.aspx?id=<%: arti.ID %>" class="btn btn-success" >¡Lo quiero!</a>
-                        
+                        <a href="Carrito.aspx?id=<%: arti.ID %>" class="btn btn-success">¡Lo quiero!</a>
+
                         <br />
                         <a href="Detalle.aspx?id=<%: arti.ID %>">Ver más</a>
                     </div>

@@ -26,7 +26,6 @@
                 <p class="card-text">
                     <asp:Label ID="detalleCategoria" runat="server" />
                 </p>
-                <a href='Carrito.aspx?id=<%#ID %>' class="btn btn-success">¡Lo quiero!</a>
 
                 <a href="Default.aspx" class="btn btn-success">Regresar</a>
             </div>

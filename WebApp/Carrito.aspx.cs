@@ -14,9 +14,6 @@ namespace WebApp
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        
-        //Eliminar mi carrito
-        public Micarrito micarrito = new Micarrito();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -49,16 +46,15 @@ namespace WebApp
                             seleccionado.Cantidad = 1;
                             seleccionado.Subtotal = seleccionado.Precio;
                             listaCarrito.Add(seleccionado);
-                            Session["Total"] = Total(listaCarrito); //
+                            Session["Total"] = Total(listaCarrito);
+                            actualizarCarrito(listaCarrito);
                         }
                         
                         Session["compras"] = listaCarrito;
 
-                        
                     }                 
                 }
 
-       
                 dgvArticulos.DataSource = listaCarrito;
                 dgvArticulos.DataBind();
 
@@ -77,8 +73,10 @@ namespace WebApp
             {
                 articulo.Cantidad += 1;
                 articulo.Subtotal = articulo.Precio * articulo.Cantidad;
-                Session["compras"] = compras;
-                Session["Total"] = Total(compras); //
+                Session.Remove("compras");
+                Session.Add("compras", compras);
+                Session["Total"] = Total(compras);
+                actualizarCarrito(compras);
             }
 
             dgvArticulos.DataSource = compras;
@@ -95,8 +93,10 @@ namespace WebApp
             {
                 articulo.Cantidad -= 1;
                 articulo.Subtotal = articulo.Precio * articulo.Cantidad;
-                Session["compras"] = compras;
+                Session.Remove("compras");
+                Session.Add("compras", compras);
                 Session["Total"] = Total(compras);
+                actualizarCarrito(compras);
             }
 
             dgvArticulos.DataSource = compras;
@@ -117,6 +117,8 @@ namespace WebApp
                 compras.Remove(articulo);
                 Session["compras"] = compras;
                 Session["Total"] = Total(compras);
+                actualizarCarrito(compras);
+
                 dgvArticulos.DataSource = compras;
                 dgvArticulos.DataBind();
             }
@@ -148,7 +150,26 @@ namespace WebApp
         {
             Session["compras"] = new List<Articulo>();
             Session["Total"] = 0;
+
             Response.Redirect("Default.aspx");
+        }
+
+        public int contarArticulos(List<Articulo> lista)
+        {
+            int cantidad = 0;
+            foreach (Articulo articulo in lista)
+            {
+                cantidad += articulo.Cantidad;
+            }
+
+            return cantidad;
+        }
+
+
+        public void actualizarCarrito(List<Articulo> lista)
+        {
+            int cantidad = contarArticulos(lista);
+            Session["CantidadArticulos"] = cantidad;
         }
     }
     
