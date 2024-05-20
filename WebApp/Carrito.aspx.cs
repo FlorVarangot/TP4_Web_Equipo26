@@ -171,7 +171,6 @@ namespace WebApp
             {
                 cantidad += articulo.Cantidad;
             }
-
             return cantidad;
         }
 

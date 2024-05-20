@@ -47,7 +47,7 @@
             <div>
                 <a href="Default.aspx" class="btn btn-success">Seguir comprando</a>
                 <asp:Button ID="btnComprar" runat="server" Text="Finalizar Compra" OnClick="btnComprar_Click" CssClass="btn btn-success" Style="align-content: end" />
-                <asp:Label runat="server" visible=true Text='<%# "Total compra: $" + Session["Total"].ToString() %>' />
+                <asp:Label ID="lblTotal" runat="server" visible=true Text='<%# "Total compra: $" + Session["Total"].ToString() %>' />
                 <%--<asp:Label ID="Label1" runat="server" visible=true Text='Total compra = $10000' />--%>
             </div>
             <div>
