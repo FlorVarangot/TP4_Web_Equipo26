@@ -15,7 +15,7 @@ namespace WebApp
     
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) // Verifico si es la primera carga de la página
+            if (!IsPostBack) 
             {
                 if (Session["ListaArticulos"] != null)
                    ListaArticulos = (List<Articulo>)Session["ListaArticulos"];
@@ -28,9 +28,6 @@ namespace WebApp
             }
         }
 
-        protected void BtnSumar_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

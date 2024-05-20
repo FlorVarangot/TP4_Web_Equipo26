@@ -28,8 +28,6 @@ namespace WebApp
 
                 if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out int ID))
                 {
-                    //lo comento para probar conviriento a entero desde detalle
-                    // int ID = int.Parse(Request.QueryString["id"]);
                     
                     Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
 
@@ -39,15 +37,8 @@ namespace WebApp
                         if (articuloCarrito != null)
                         {
 
+                            articuloCarrito.Cantidad += 1;
 
-
-
-                            //CON ESTSA VALIDACION ACA; SI TOCO + SUMA DOBLE 
-                            //Si el art ya está en carrito, le sumo cant
-                            //articuloCarrito.Cantidad += 1;
-
-                            //Me gustaria que si ya existe en mi carrito, entonces me avise, o ponga el boton en disabled.
-                            //messageBox? label.Text?
                         }
                         else
                         {
@@ -63,18 +54,12 @@ namespace WebApp
                     }                 
                 }
 
-                
-              
-
-
+       
                 dgvArticulos.DataSource = listaCarrito;
                 dgvArticulos.DataBind();
 
-
-
             }
-
-            
+           
         }
 
         protected void btnMas_Click(object sender, EventArgs e)
@@ -90,7 +75,6 @@ namespace WebApp
                 Session["compras"] = compras;
             }
 
-            //  Response.Redirect(Request.RawUrl);
             dgvArticulos.DataSource = compras;
             dgvArticulos.DataBind();
         }
@@ -107,7 +91,6 @@ namespace WebApp
                 Session["compras"] = compras;
             }
 
-            // Response.Redirect(Request.RawUrl);
             dgvArticulos.DataSource = compras;
             dgvArticulos.DataBind();
         }
@@ -132,8 +115,6 @@ namespace WebApp
             }
 
         }
-
-        
 
 
     }
