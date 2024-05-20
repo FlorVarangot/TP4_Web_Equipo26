@@ -14,7 +14,5 @@ namespace dominio
         public int IdArticulo { get; set; }
 
         public string ImagenURl { get; set; }
-
-    
     }
 }

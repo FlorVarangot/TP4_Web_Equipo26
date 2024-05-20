@@ -23,7 +23,10 @@ namespace WebApp
                         Articulo seleccionado = ListaOriginal.Find(x => x.ID == ID);
                         if (seleccionado != null)
                         {
-                            detalleImagen.ImageUrl = seleccionado.Imagen.ImagenURl;
+                            rptImages.DataSource = seleccionado.Imagenes;
+                            rptImages.DataBind();
+
+                            detalleImagen.ImageUrl = seleccionado.Imagenes[0].ImagenURl;
                             detalleNombre.Text = seleccionado.Nombre;
                             detalleDescripcion.Text = seleccionado.Descripcion;
                             detallePrecio.Text = seleccionado.Precio.ToString();
